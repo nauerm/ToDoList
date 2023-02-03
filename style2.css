@@ -45,7 +45,7 @@ section{
 h3{
     color:var(--txt-light);
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 700;
     margin-bottom: 0.5rem;
 }
 h4{
@@ -175,13 +175,13 @@ input:checked ~ .bubble::after{
 
 .todo-list .todo-item{
     display: flex;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--bg-light);
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     margin-bottom: 1rem;
-    min-width:fit-content;
 }
 
 .todo-item label{
@@ -192,6 +192,7 @@ input:checked ~ .bubble::after{
 
 .todo-item .todo-content{
     flex: 1 0 0%;
+    min-width: 10%;
 }
 
 .todo-item .todo-content input{
@@ -207,7 +208,7 @@ input:checked ~ .bubble::after{
 .todo-item .actions button{
     display: inline-block;
     font-weight: 700;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     border-radius: 0.25rem;
     color: #FFF;
     cursor: pointer;
