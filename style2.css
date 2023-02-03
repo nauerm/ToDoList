@@ -181,7 +181,7 @@ input:checked ~ .bubble::after{
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     margin-bottom: 1rem;
-    /* min-width:fit-content; */
+    min-width:fit-content;
 }
 
 .todo-item label{
