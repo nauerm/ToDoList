@@ -1,6 +1,6 @@
 /* Variables */
 :root{
-    --primary: #EA40A4;
+    --primary: #40eab1;
     --business: #3AA2EE;
     --personal: var(--primary);
     --light: #EEE;
@@ -10,8 +10,8 @@
 
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-    --business-glow: 0px 0px 4px rgba(58, 162, 238, 0.75);
-    --personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+    --business-glow: 0px 0px 3px rgba(58, 162, 238, 0.75);
+    --personal-glow: 0px 0px 3px rgba(64, 234, 177, 0.75);
 }
 
 * {
@@ -49,6 +49,9 @@ h4{
     font-size: 0.875rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+}
+h2, h3, h4{
+    cursor: default;
 }
 .greeting .title{
     display:flex;
@@ -142,12 +145,11 @@ input:checked ~ .bubble::after{
     width: 100%;
     font-size: 1.125;
     padding: 1rem 1.5rem;
-    color: #fff;
+    color: var(--dark);
     background-color: var(--primary);
     border-radius: 0.5rem;
     box-shadow: var(--personal-glow);
     cursor: pointer;
-    transition: 0.2s ease-in-out;
 }
 
 .create-todo input[type="submit"]:hover{
@@ -159,18 +161,77 @@ input:checked ~ .bubble::after{
 }
 
 .todo-list .todo-item{
-    display:flex;
+    display: flex;
     align-items: center;
     background-color: #FFF;
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     margin-bottom: 1rem;
+    /* min-width:fit-content; */
 }
+
+.todo-item label{
+    display:block;
+    margin-right: 1rem;
+    cursor:pointer;
+}
+
+.todo-item .todo-content{
+    flex: 1 0 0%;
+}
+
+.todo-item .todo-content input{
+    color: var(--dark);
+    font-size: 1.125rem;
+}
+
+.todo-item .actions{
+    display: flex;
+    align-items: center;
+}
+
+.todo-item .actions button{
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.todo-item .actions button:hover{
+    opacity: 0.75;
+}
+
+.todo-item .actions .edit{
+    margin-right: 0.5rem;
+    background-color: var(--primary);
+    color: var(--dark);
+}
+.todo-item .actions .delete{
+    background-color: var(--danger);
+}
+
+.todo-item.done .todo-content input{
+    text-decoration: line-through;
+    color: var(--grey);
+}
+
+
 /* Desktop */
-@media screen and (min-width:500px)
+@media screen and (min-width:600px)
 {
-    body{
+    .create-todo .options{
+        min-width:550px;
+        width:40%;
+        margin: 0rem auto;
+        margin-bottom: 1rem;
+    }
+
+    .create-todo input[type="submit"]{
+        margin: 0rem auto;
+        min-width:550px;
+        width: 40%;
     }
     
 }
