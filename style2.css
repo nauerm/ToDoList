@@ -256,3 +256,11 @@ input:checked ~ .bubble::after{
     }
     
 }
+/* Small Screen */
+@media screen and (max-width:375px)
+{
+    .todo-item .todo-content input{
+        font-size: 0.8rem;
+    }
+    
+}
