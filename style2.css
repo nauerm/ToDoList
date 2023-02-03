@@ -101,22 +101,28 @@ h2, h3, h4{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 0.5rem;
     background-color: var(--bg-light);
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     cursor:pointer;
+    border: 3px solid var(--bg-light);
+}
+.create-todo .options label:hover{
+    box-shadow: 0px 0px 1px #666;
+    border: 3px solid #666;
 }
 input[type="radio"],
 input[type="checkbox"]{
     display:none
 }
 .bubble{
+    margin-top: 0.5rem;
     display:flex;
     align-items:center;
     justify-content: center;
     width: 20px;
-    height:20px;
+    height: 20px;
     border-radius: 50%;
     border: 2px solid var(--business);
     box-shadow: var(--business-glow);
@@ -149,7 +155,7 @@ input:checked ~ .bubble::after{
 .create-todo .options label div{
     color: #FFF;
     font-size: 1.125rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .create-todo input[type="submit"]{
